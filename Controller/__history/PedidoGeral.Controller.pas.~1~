@@ -1,0 +1,17 @@
+unit PedidoGeral.Controller;
+
+interface
+
+uses cliente.Model, pedidoproduto.Model, pedidosgerais.Model, system.Generics.Collections;
+
+type
+  TPedidoGeralController = class
+    private
+    public
+
+  end;
+
+
+implementation
+
+end.

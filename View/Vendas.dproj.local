@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/10/15 10:30:28.000.905,=C:\Users\Ricardo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 10:31:29.000.130,D:\Projeto\Teste_WK\View\Vendas.View.pas=C:\Users\Ricardo\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 10:31:29.000.130,D:\Projeto\Teste_WK\View\Vendas.View.dfm=C:\Users\Ricardo\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2024/10/15 10:31:38.000.969,D:\Projeto\Teste_WK\View\Vendas.dproj=C:\Users\Ricardo\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/10/15 10:31:48.000.693,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 10:32:41.000.704,D:\Projeto\Teste_WK\Model\Cliente.Model.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 10:42:17.000.057,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 10:48:49.000.617,D:\Projeto\Teste_WK\Model\PedidoProduto.Model.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 11:02:19.000.018,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 11:07:34.000.654,D:\Projeto\Teste_WK\Model\PedidosGerais.Model.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 11:26:48.000.676,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/15 11:28:54.000.482,D:\Projeto\Teste_WK\Controller\PedidoGeral.Controller.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 08:31:57.000.125,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 08:38:16.000.100,D:\Projeto\Teste_WK\Model\Produto.Model.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 08:39:59.000.335,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 08:46:16.000.517,D:\Projeto\Teste_WK\DAO\DAOConexao.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 09:46:05.000.972,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 09:49:52.000.618,D:\Projeto\Teste_WK\Controller\Conexao.Controller.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 10:41:44.000.929,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 10:44:46.000.333,D:\Projeto\Teste_WK\DAO\DAOPedidosGerais.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/16 23:57:20.000.628,D:\Projeto\Teste_WK\Model\Model.PedidoItem.pas=D:\Projeto\Teste_WK\Model\PedidoProduto.Model.pas</Transaction>
+    <Transaction>2024/10/16 23:58:11.000.367,D:\Projeto\Teste_WK\Model\Model.Pedido.pas=D:\Projeto\Teste_WK\Model\PedidosGerais.Model.pas</Transaction>
+    <Transaction>2024/10/16 23:58:32.000.920,D:\Projeto\Teste_WK\Model\Model.Produto.pas=D:\Projeto\Teste_WK\Model\Produto.Model.pas</Transaction>
+    <Transaction>2024/10/16 23:59:02.000.863,D:\Projeto\Teste_WK\Model\Model.Cliente.pas=D:\Projeto\Teste_WK\Model\Cliente.Model.pas</Transaction>
+    <Transaction>2024/10/16 23:59:20.000.560,D:\Projeto\Teste_WK\DAO\DAOPedidos.pas=D:\Projeto\Teste_WK\DAO\DAOPedidosGerais.pas</Transaction>
+    <Transaction>2024/10/16 23:59:50.000.900,D:\Projeto\Teste_WK\Controller\Controller.Pedido.pas=D:\Projeto\Teste_WK\Controller\PedidoGeral.Controller.pas</Transaction>
+    <Transaction>2024/10/17 00:00:04.000.430,D:\Projeto\Teste_WK\Controller\Controller.Conexao.pas=D:\Projeto\Teste_WK\Controller\Conexao.Controller.pas</Transaction>
+    <Transaction>2024/10/17 00:03:52.000.768,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/17 00:06:30.000.069,D:\Projeto\Teste_WK\DAO\DAOPedidoItem.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/17 00:31:02.000.918,=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+    <Transaction>2024/10/17 00:34:49.000.638,D:\Projeto\Teste_WK\Controller\Controller.PedidoItem.pas=D:\Projeto\Teste_WK\View\Unit1.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="..\..\Teste_WK"/>
+    <File Path="..\Controller"/>
+    <File Path="..\Controller\Controller.Conexao.pas"/>
+    <File Path="..\Controller\Controller.Pedido.pas"/>
+    <File Path="..\Controller\Controller.PedidoItem.pas"/>
+    <File Path="..\DAO"/>
+    <File Path="..\DAO\DAOConexao.pas"/>
+    <File Path="..\DAO\DAOPedidos.pas"/>
+    <File Path="..\DAO\DAOPedidoItem.pas"/>
+    <File Path="..\Model"/>
+    <File Path="..\Model\Model.Cliente.pas"/>
+    <File Path="..\Model\Model.PedidoItem.pas"/>
+    <File Path="..\Model\Model.Pedido.pas"/>
+    <File Path="..\Model\Model.Produto.pas"/>
+    <File Path="Vendas.View.pas"/>
+    <File Path="Vendas.View.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

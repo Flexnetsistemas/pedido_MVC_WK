@@ -1,0 +1,71 @@
+unit PedidoGeral.Controller;
+
+interface
+
+uses Cliente.Model, PedidoProduto.Model,PedidosGerais.Model, system.Generics.Collections;
+
+type
+  TPedidoGeraisController = class
+    private
+     FModelPedido    : TPedidosGerais;
+     FModelPedidoProd: TPedidoProdutos;
+    public
+      constructor Create;
+      destructor Destroy; override;
+
+      property ModelPedidoGeral :TPedidosGerais read FModelPedido write FModelPedido;
+      property ModelPedidoProduto : TPedidoProdutos read FModelPedidoProd write FModelPedidoProd;
+
+  function  CalularTotalPedido:Double;
+  function  IncluirItem:Boolean;
+  procedure ExcluirItem(AID :Integer);
+  procedure AlterarItem(AID :Integer);
+  procedure SalvarPedido(APedido : TPedidosGerais);
+
+  end;
+
+
+implementation
+
+{ TPedidoGeraisController }
+
+procedure TPedidoGeraisController.AlterarItem(AID: Integer);
+begin
+
+end;
+
+function TPedidoGeraisController.CalularTotalPedido: Double;
+begin
+
+end;
+
+constructor TPedidoGeraisController.Create;
+begin
+  FModelPedido := TPedidosGerais.Create;
+  FModelPedidoProd := TPedidoProdutos.Create;
+inherited Create;
+end;
+
+destructor TPedidoGeraisController.Destroy;
+begin
+   FModelPedido.Free;
+   FModelPedidoProd.Free;
+  inherited;
+end;
+
+procedure TPedidoGeraisController.ExcluirItem(AID: Integer);
+begin
+
+end;
+
+function procedure TPedidoGeraisController.IncluirItem:Boolean;
+begin
+
+end;
+
+procedure TPedidoGeraisController.SalvarPedido(APedido: TPedidosGerais);
+begin
+
+end;
+
+end.

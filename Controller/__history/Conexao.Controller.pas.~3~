@@ -1,0 +1,42 @@
+unit Conexao.Controller;
+
+interface
+
+Type
+  TControllerConexao = class
+    private
+      constructor create;
+      destructor destroy;
+    public
+      class function getInstancia : TControllerConexao;
+  end;
+
+implementation
+
+var
+  Instancia: TControllerConexao;
+
+{ TControllerConexao }
+
+constructor TControllerConexao.create;
+begin
+inherited;
+end;
+
+destructor TControllerConexao.destroy;
+begin
+inherited;
+
+end;
+
+class function TControllerConexao.getInstancia: TControllerConexao;
+begin
+
+  if not Assigned(Instancia) then
+    Instancia := TControllerConexao.Create;
+
+   result := Instancia;
+
+end;
+
+end.

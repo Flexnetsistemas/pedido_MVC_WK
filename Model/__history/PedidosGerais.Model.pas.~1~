@@ -1,0 +1,22 @@
+unit PedidosGerais.Model;
+
+interface
+
+uses
+   PedidoProduto.Model;
+
+type
+  TPedidosGerais = Class
+  private
+  public
+
+  NumeroPedido : Integer;
+  DataEmissao  : Date;
+  Codigocliente_id: Integer;
+  ValorTotal   : Double;
+  ItensPedido : TOjbectList<TPedidoProdutos>;
+End;
+
+implementation
+
+end.

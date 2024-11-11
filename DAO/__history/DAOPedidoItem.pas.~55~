@@ -1,0 +1,145 @@
+unit DAOPedidoItem;
+
+interface
+
+uses
+  Controller.Conexao,
+  Model.PedidoItem,
+  system.SysUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  Data.DB, FireDAC.Comp.Client;
+
+type
+  TDaoPedidoItem  = Class
+  private
+ //   FModelPedidoItem: TModelPedidoItem;
+ {
+    FVlrTotal: Double;
+    FDescricao: String;
+    FCodigoProduto: Integer;
+    FID: Integer;
+    FQtde: Double;
+    FNumeropedido_id: Integer;
+    FVlrUnitario: Double;
+
+    procedure SetCodigoProduto(const Value: Integer);
+    procedure SetDescricao(const Value: String);
+    procedure SetID(const Value: Integer);
+    procedure SetNumeropedido_id(const Value: Integer);
+    procedure SetQtde(const Value: Double);
+    procedure SetVlrTotal(const Value: Double);
+    procedure SetVlrUnitario(const Value: Double);
+   }
+  public
+   constructor Create;
+   destructor Destroy; Override;
+
+   function   calcularSubTotal :Double;
+   function   editarItem       :TFDQuery;
+   function  incluirItem(Item:TModelPedidoItem):Boolean;
+
+  // property ModelPedidoItem:TModelPedidoItem  read FModelPedidoItem write FModelPedidoItem;
+
+ {
+   property   ID             :Integer  read FID              write SetID;
+   property   Numeropedido_id:Integer  read FNumeropedido_id write SetNumeropedido_id;
+   property   CodigoProduto  :Integer  read FCodigoProduto   write SetCodigoProduto;
+   property   Qtde           :Double   read FQtde            write SetQtde;
+   property   VlrUnitario    :Double   read FVlrUnitario     write SetVlrUnitario;
+   property   VlrTotal       :Double   read FVlrTotal        write SetVlrTotal;
+   property   Descricao      :String   read FDescricao       write SetDescricao;
+   }
+
+  End;
+
+implementation
+
+{ TDAOPedidoItem }
+
+
+
+function TDAOPedidoItem.calcularSubTotal: Double;
+begin
+
+end;
+
+constructor TDAOPedidoItem.Create;
+begin
+ //FModelPedidoItem : TModelPedidoItem.Create;
+end;
+
+destructor TDAOPedidoItem.Destroy;
+begin
+
+  inherited;
+end;
+
+function TDAOPedidoItem.editarItem: TFDQuery;
+begin
+
+end;
+
+function TDAOPedidoItem.incluirItem(Item:TModelPedidoItem):Boolean;
+Var
+qyItem : TFDQuery;
+
+begin
+  try
+   qyItem := TControllerConexao.getInstancia().daoConexao.getQuery;
+   try
+     qyItem.SQL.Text := 'insert into pedidoprodutos (numeropedido_id, codigoproduto, quantidade, vlrunitario, vlrtotal, descricao) values(:npedido,:npro,:nqtde,:nvlrun, :nvlrtotal,:vdescricao)';
+     qyItem.ParamByName('npedido').AsInteger  :=  Item.Numeropedido_id;
+     qyItem.ParamByName('npro').AsInteger     :=  Item.CodigoProduto;
+     qyItem.ParamByName('nqtde').AsFloat      :=  Item.Qtde;
+     qyItem.ParamByName('nvlrun').AsFloat     :=  Item.VlrUnitario;
+     qyItem.ParamByName('nvlrtotal').AsFloat  :=  Item.VlrTotal;
+     qyItem.ParamByName('vdescricao').AsString:=  Item.Descricao;
+     qyItem.ExecSQL;
+    except
+     result := false;
+   end;
+  finally
+    qyItem.free;
+    result := true;
+  end;
+
+end;
+ {
+procedure TDAOPedidoItem.SetCodigoProduto(const Value: Integer);
+begin
+  FCodigoProduto := Value;
+end;
+
+procedure TDAOPedidoItem.SetDescricao(const Value: String);
+begin
+  FDescricao := Value;
+end;
+
+procedure TDAOPedidoItem.SetID(const Value: Integer);
+begin
+  FID := Value;
+end;
+
+procedure TDAOPedidoItem.SetNumeropedido_id(const Value: Integer);
+begin
+  FNumeropedido_id := Value;
+end;
+
+procedure TDAOPedidoItem.SetQtde(const Value: Double);
+begin
+  FQtde := Value;
+end;
+
+procedure TDAOPedidoItem.SetVlrTotal(const Value: Double);
+begin
+  FVlrTotal := Value;
+end;
+
+procedure TDAOPedidoItem.SetVlrUnitario(const Value: Double);
+begin
+  FVlrUnitario := Value;
+end;
+ }
+end.

@@ -1,0 +1,79 @@
+unit PedidoProduto.Model;
+
+interface
+
+
+type
+  TPedidoProdutos  = Class
+  private
+    FVlrTotal: Double;
+    FCodigoProduto: Integer;
+    FID: Integer;
+    FQtde: Double;
+    FNumeropedido_id: Integer;
+    FVlrUnitario: Double;
+    FDescricao: String;
+    procedure SetCodigoProduto(const Value: Integer);
+    procedure SetID(const Value: Integer);
+    procedure SetNumeropedido_id(const Value: Integer);
+    procedure SetQtde(const Value: Double);
+    procedure SetVlrTotal(const Value: Double);
+    procedure SetVlrUnitario(const Value: Double);
+    procedure SetDescricao(const Value: String);
+  public
+   function CalcularTotal : Double;
+   property ID: Integer read FID write SetID;
+   property Numeropedido_id: Integer read FNumeropedido_id write SetNumeropedido_id;
+   property CodigoProduto: Integer read FCodigoProduto write SetCodigoProduto;
+   property Qtde: Double read FQtde write SetQtde;
+   property VlrUnitario : Double read FVlrUnitario write SetVlrUnitario;
+   property VlrTotal:Double  read FVlrTotal write SetVlrTotal;
+   property Descricao: String read FDescricao write SetDescricao;
+
+  End;
+
+implementation
+
+{ TPedidoProdutos }
+
+function TPedidoProdutos.CalcularTotal: Double;
+begin
+  Result := FQtde * FVlrUnitario;
+end;
+
+procedure TPedidoProdutos.SetCodigoProduto(const Value: Integer);
+begin
+  FCodigoProduto := Value;
+end;
+
+procedure TPedidoProdutos.SetDescricao(const Value: String);
+begin
+  FDescricao := Value;
+end;
+
+procedure TPedidoProdutos.SetID(const Value: Integer);
+begin
+  FID := Value;
+end;
+
+procedure TPedidoProdutos.SetNumeropedido_id(const Value: Integer);
+begin
+  FNumeropedido_id := Value;
+end;
+
+procedure TPedidoProdutos.SetQtde(const Value: Double);
+begin
+  FQtde := Value;
+end;
+
+procedure TPedidoProdutos.SetVlrTotal(const Value: Double);
+begin
+  FVlrTotal := Value;
+end;
+
+procedure TPedidoProdutos.SetVlrUnitario(const Value: Double);
+begin
+  FVlrUnitario := Value;
+end;
+
+end.

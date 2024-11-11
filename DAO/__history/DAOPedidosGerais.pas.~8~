@@ -1,0 +1,118 @@
+unit DAOPedidosGerais;
+
+interface
+
+uses
+  System.Generics.Collections, Cliente.Model,  PedidoProduto.Model,
+  PedidosGerais.Model, DAOConexao,  Conexao.Controller, system.SysUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  Data.DB, FireDAC.Comp.Client;
+
+type
+  TDAOPedidosGerais = Class
+  private
+    FItensPedido: TObjectList<TPedidoProdutos>;
+   public
+
+  function CalcularTotalVenda(AItem :TPedidoProdutos):Double;
+  function ListarPedidoGeral:TFDQuery;
+  function IncluirItem(AItem :TPedidoProdutos):Boolean;
+  function ExcluirItem(AItem :TPedidoProdutos):Boolean;
+  function AlterarItem(AItem :TPedidoProdutos):Boolean;
+
+
+End;
+
+implementation
+
+{ TDAOPedidosGerais }
+
+function TDAOPedidosGerais.AlterarItem(AItem: TPedidoProdutos): Boolean;
+Var
+qyItem : TFDQuery;
+begin
+  try
+   qyItem := TControllerConexao.getInstancia().daoConexao.getQuery;
+   try
+     qyItem.SQL.Text := '';
+   finally
+    qyItem.free;
+   end;
+   result := true;
+  except
+    result := false;
+  end;
+
+end;
+
+function TDAOPedidosGerais.ListarPedidoGeral:TFDQuery;
+Var
+qyPedidoGeral: TFDQuery;
+begin
+  try
+   qyPedidoGeral := TControllerConexao.getInstancia().daoConexao.getQuery;
+    result := qyPedidoGeral;
+   finally
+    qyPedidoGeral.free;
+   end;
+
+
+end;
+
+function TDAOPedidosGerais.CalcularTotalVenda(AItem: TPedidoProdutos): Double;
+Var
+qyItem : TFDQuery;
+begin
+  try
+   qyItem := TControllerConexao.getInstancia().daoConexao.getQuery;
+   try
+     qyItem.SQL.Text := '';
+   finally
+    qyItem.free;
+   end;
+   result := 0;
+  except
+    result := 0;
+  end;
+
+end;
+
+function TDAOPedidosGerais.ExcluirItem(AItem: TPedidoProdutos): Boolean;
+Var
+qyItem : TFDQuery;
+begin
+  try
+   qyItem := TControllerConexao.getInstancia().daoConexao.getQuery;
+   try
+     qyItem.SQL.Text := '';
+   finally
+    qyItem.free;
+   end;
+   result := true;
+  except
+    result := false;
+  end;
+
+end;
+
+function TDAOPedidosGerais.IncluirItem(AItem: TPedidoProdutos): Boolean;
+Var
+qyItem : TFDQuery;
+begin
+  try
+   qyItem := TControllerConexao.getInstancia().daoConexao.getQuery;
+   try
+     qyItem.SQL.Text := '';
+   finally
+    qyItem.free;
+   end;
+   result := true;
+  except
+    result := false;
+  end;
+
+end;
+
+end.

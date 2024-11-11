@@ -1,0 +1,19 @@
+unit Conexao.Controller;
+
+interface
+
+Type
+  TControllerConexao = class
+    private
+      constructor create;
+      destructor destroy;
+    public
+      class function getInstancia : TControllerConexao;
+  end;
+
+implementation
+
+var
+  instanciaBD : TControllerConexao;
+
+end.

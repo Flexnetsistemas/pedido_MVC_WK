@@ -1,0 +1,40 @@
+unit Cliente.Model;
+
+type
+  TCliente = Class
+    private
+    FACodigo: Integer;
+    FACidade: String;
+    FANome: String;
+    FAUF: String;
+    public
+    constructor Create(ACodigo:Integer; ANome, ACidade, AUF:String);
+    property Codigo: Integer  read FACodigo write FACodigo;
+    property Nome: String read ANome write ANome;
+    property Cidade: String read ACidade write ACidade;
+    property UF: String read AUF write AUF;
+  End;
+
+
+interface
+
+implementation
+
+{ TCliente }
+
+
+
+{ TCliente }
+
+
+constructor TCliente.Create(ACodigo: Integer; ANome, ACidade, AUF: String);
+begin
+
+  FACodigo := ACodigo;
+  FANome   := ANome;
+  FACidade := ACidade;
+  AUF      := AUF;
+
+end;
+
+end.

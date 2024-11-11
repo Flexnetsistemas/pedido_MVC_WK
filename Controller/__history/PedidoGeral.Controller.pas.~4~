@@ -1,0 +1,66 @@
+unit PedidoGeral.Controller;
+
+interface
+
+uses Cliente.Model, PedidoProduto.Model,PedidosGerais.Model, system.Generics.Collections;
+
+type
+  TPedidoGeraisController = class
+    private
+    FPedido : TPedidosGerais;
+    public
+      constructor Create;
+      destructor Destroy; override;
+
+  function  CalularTotalPedido:Double;
+  procedure IncluirItem(AID, ANumeropedido_id, ACodigoProduto:Integer; AQuantidade, AVlrUnitario, AVlrTotal:Double);
+  procedure ExcluirItem(AID :Integer);
+  procedure AlterarItem(AID :Integer);
+  procedure SalvarPedido(APedido : TPedidosGerais);
+
+  end;
+
+
+implementation
+
+{ TPedidoGeraisController }
+
+procedure TPedidoGeraisController.AlterarItem(AID: Integer);
+begin
+
+end;
+
+function TPedidoGeraisController.CalularTotalPedido: Double;
+begin
+
+end;
+
+constructor TPedidoGeraisController.Create;
+begin
+    FPedido := TPedidosGerais.Create;
+inherited Create;
+end;
+
+destructor TPedidoGeraisController.Destroy;
+begin
+   FPedido.Free;
+  inherited;
+end;
+
+procedure TPedidoGeraisController.ExcluirItem(AID: Integer);
+begin
+
+end;
+
+procedure TPedidoGeraisController.IncluirItem(AID, ANumeropedido_id,
+  ACodigoProduto: Integer; AQuantidade, AVlrUnitario, AVlrTotal: Double);
+begin
+
+end;
+
+procedure TPedidoGeraisController.SalvarPedido(APedido: TPedidosGerais);
+begin
+
+end;
+
+end.

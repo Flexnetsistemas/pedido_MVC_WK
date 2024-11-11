@@ -1,0 +1,64 @@
+unit Controller.PedidoItem;
+
+interface
+
+uses
+  Model.PedidoItem,
+  system.SysUtils,
+  FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.VCLUI.Wait,
+  Data.DB, FireDAC.Comp.Client;
+
+ Type
+   TControllerPedidoItem = class
+     private
+    FModelPedidoItem: TModelPedidoItem;
+
+     public
+     constructor Create;
+     destructor Destroy; override;
+
+     function   calcularSubTotal :Double;
+     function   editarItem       :TFDQuery;
+     function   incluirItem:Boolean;
+
+     property ModelPedidoItem :TModelPedidoItem read FModelPedidoItem write FModelPedidoItem;
+
+   end;
+
+
+implementation
+
+{ TControllerPedidoItem }
+
+function TControllerPedidoItem.calcularSubTotal: Double;
+begin
+
+end;
+
+constructor TControllerPedidoItem.Create;
+begin
+ FModelPedidoItem := TModelPedidoItem.Create;
+
+ inherited Create;
+
+end;
+
+destructor TControllerPedidoItem.Destroy;
+begin
+   FModelPedidoItem.free;
+  inherited;
+end;
+
+function TControllerPedidoItem.editarItem: TFDQuery;
+begin
+
+end;
+
+function TControllerPedidoItem.incluirItem: Boolean;
+begin
+  FModelPedidoItem.IncluirItem;
+end;
+
+end.
