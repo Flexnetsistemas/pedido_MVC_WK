@@ -1,7 +1,7 @@
 
 # Projeto para Teste Técnico WK Technology
 
-Este projeto foi desenvolvido como parte do avaliação técnica para a WK Technology. O objetivo é aplicar as técnicas de Programação Orientada a Objetos (POO), Modelo-Vista-Controlador (MVC), Clean Code e boas práticas de desenvolvimento. O projeto é um formulário de pedidos.
+Este projeto foi desenvolvido como parte do avaliação técnica para a WK Technology. O objetivo é aplicar as técnicas de Programação Orientada a Objetos (POO), Modelo-Visão-Controle (MVC), Clean Code e boas práticas de desenvolvimento. O projeto é um formulário de pedidos.
 
 ## Tecnologias Utilizadas
 
@@ -39,6 +39,7 @@ O banco de dados necessário para o funcionamento do projeto está descrito no s
 
 - **Delphi (10.3 ou superior)**
 - **MySQL**: Instalar e configurar um banco de dados MySQL local ou remoto.
+- **FireDAC**: Componente de conexão dom banco de dados.
 
 ### Passos
 
@@ -60,27 +61,27 @@ O banco de dados necessário para o funcionamento do projeto está descrito no s
 O sistema oferece as seguintes funcionalidades:
 
 1. **Novo Pedido:**
-   - O usuário pode criar um novo pedido, selecionando um cliente e adicionando itens ao pedido.
+   - O usuário pode criar um novo pedido, selecionando um cliente pelo código e adicionando itens ao pedido.
    - O sistema permite que o usuário adicione novos produtos ao pedido, especificando a quantidade e o valor de cada item.
 
 2. **Consulta de Pedidos:**
-   - O usuário pode consultar os pedidos existentes, visualizando os detalhes como o cliente associado, os itens do pedido e o valor total.
+   - O usuário pode consultar os pedidos existentes, pelo número do pedido, visualizando os detalhes como o cliente associado, os itens do pedido e o valor total.
 
 3. **Excluir Pedido:**
-   - É possível excluir um pedido existente, removendo o pedido e seus itens do banco de dados,clicando delete no dbgrid
+   - É possível excluir um pedido existente, removendo o pedido e seus itens do banco de dados.
 
 4. **Selecionar Cliente pelo Código:**
    - Ao criar um pedido, o usuário pode selecionar um cliente pelo código. Isso permite que o sistema associe o pedido a um cliente existente no banco de dados.
 
 5. **Adicionar Produto pelo Código:**
-   - Durante a inclusão de itens no pedido, o usuário pode digitar o código do produto o ira trazer a quantidade e o valor. O sistema automaticamente calcula o valor total do item, baseado no preço do produto e na quantidade inserida.
+   - Durante a inclusão de itens no pedido, o usuário pode digitar o código do produto  ira trazer a quantidade padrao 1 e o valor de cadastro do produto. O sistema automaticamente calcula o valor total do item, baseado no preço do produto e na quantidade inserida.
 
 6. **Incluir e Alterar Itens no Pedido:**
-   - O sistema permite incluir um item na lista de itens do pedido e, ao mesmo tempo, fazer alterações diretamente na grid (tabela de itens) do pedido.
-   - Caso o item já exista, ao incluir um novo, o sistema atualiza a quantidade e o valor do item existente na grid.
+   - O sistema permite incluir um item na lista de itens do pedido e, ao mesmo tempo, fazer alterações diretamente nos componentes de inclusão.
+   - Caso o item já exista, ao incluir de novo, o sistema atualiza a quantidade e o valor do item existente na grid.
 
 7. **Alterar Quantidade e Valor do Item:**
-   - O usuário pode alterar a quantidade e o valor dos itens do pedido diretamente clicando na grid, e o sistema recalcula o total do pedido automaticamente.
+   - O usuário pode alterar a quantidade e o valor dos itens do pedido diretamente clicando na grid, e fazer alterações diretamente nos componentes de inclusão.
 
 8. **Excluir Item do Pedido:**
    - O usuário pode excluir itens do pedido, removendo-os da lista de itens na grid, tecla delete
@@ -93,7 +94,7 @@ O sistema oferece as seguintes funcionalidades:
       - Validação de campos obrigatórios (como código do produto, quantidade e valor).
       - Validação para garantir que a quantidade inserida
       - Validação para garantir que o valor do item seja um número válido.
-      - Validação do cliente selecionado antes da salvar o pedido.
+      - Validação do cliente selecionado, antes da salvar o pedido.
 
 ### Autor
 ---
