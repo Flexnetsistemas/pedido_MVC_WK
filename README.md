@@ -95,10 +95,12 @@ O sistema oferece as seguintes funcionalidades:
       - Validação para garantir que o valor do item seja um número válido.
       - Validação do cliente selecionado antes da salvar o pedido.
 
+### Autor
+---
+<a href="https://www.flexnetsistemas.com.br/">
+ <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/65642299?s=60&amp;v=4" width="100px;" alt=""/>
+ <br />
+ <sub><b>Ricardo de Assis</b></sub></a> <a href="https://www.flexnetsistemas.com.br/" title="Flexnet">🚀</a>
 
-
-
-
-
-
-
+[![Linkedin Badge](https://img.shields.io/badge/-Ricardo-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/ricardo-de-assis-dev/)](https://www.linkedin.com/in/ricardo-de-assis-dev/) 
+[![Gmail Badge](https://img.shields.io/badge/-rdassis@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:rdassis@gmail.com)](mailto:rdassis@gmail.com)
